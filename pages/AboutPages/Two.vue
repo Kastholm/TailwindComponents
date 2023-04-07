@@ -1,3 +1,17 @@
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
 <template>
   <div class="bg-white">
     <!-- Header -->
@@ -95,461 +109,501 @@
 
     <main class="isolate">
       <!-- Hero section -->
-      <div class="relative isolate -z-10">
-        <svg
-          class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-              width="200"
-              height="200"
-              x="50%"
-              y="-1"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-            <path
-              d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-              stroke-width="0"
-            />
-          </svg>
-          <rect
-            width="100%"
-            height="100%"
-            stroke-width="0"
-            fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
-          />
-        </svg>
+      <div
+        class="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14"
+      >
         <div
-          class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+          class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
           aria-hidden="true"
-        >
+        />
+        <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
           <div
-            class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-            style="
-              clip-path: polygon(
-                63.1% 29.5%,
-                100% 17.1%,
-                76.6% 3%,
-                48.4% 0%,
-                44.6% 4.7%,
-                54.5% 25.3%,
-                59.8% 49%,
-                55.2% 57.8%,
-                44.4% 57.2%,
-                27.8% 47.9%,
-                35.1% 81.5%,
-                0% 97.7%,
-                39.2% 100%,
-                35.2% 81.4%,
-                97.2% 52.8%,
-                63.1% 29.5%
-              );
-            "
-          />
-        </div>
-        <div class="overflow-hidden">
-          <div
-            class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32"
+            class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
           >
-            <div
-              class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
+            <h1
+              class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto"
             >
-              <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1
-                  class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-                >
-                  We’re changing the way people connect.
-                </h1>
-                <p
-                  class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
-                >
-                  Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                  quis cupidatat mollit aute velit. Et labore commodo nulla
-                  aliqua proident mollit ullamco exercitation tempor. Sint
-                  aliqua anim nulla sunt mollit id pariatur in voluptate cillum.
-                  Eu voluptate tempor esse minim amet fugiat veniam occaecat
-                  aliqua.
-                </p>
-              </div>
-              <div
-                class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
-              >
-                <div
-                  class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
-                >
-                  <div class="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
-                >
-                  <div class="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-                    />
-                  </div>
-                  <div class="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-                    />
-                  </div>
-                </div>
-                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                  <div class="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-                    />
-                  </div>
-                  <div class="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                      alt=""
-                      class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div
-                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Content section -->
-      <div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >
-            Our mission
-          </h2>
-          <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-            <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <p class="text-xl leading-8 text-gray-600">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas ac. Diam nulla orci at in viverra
-                scelerisque eget. Eleifend egestas fringilla sapien.
+              We’re a passionate group of people working from around the world
+              to build the future of ecommerce.
+            </h1>
+            <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+              <p class="text-lg leading-8 text-gray-600">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt
+                sunt. Qui irure qui lorem cupidatat commodo.
               </p>
-              <div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
-                <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                  risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                  Id dolor praesent donec est. Odio penatibus risus viverra
-                  tellus varius sit neque erat velit. Faucibus commodo massa
-                  rhoncus, volutpat. Dignissim sed eget risus enim. Mattis
-                  mauris semper sed amet vitae sed turpis id.
-                </p>
-                <p class="mt-10">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien
-                  duis odio id et. Id blandit molestie auctor fermentum
-                  dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
-                  varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                  convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-              </div>
             </div>
-            <div class="lg:flex lg:flex-auto lg:justify-center">
-              <dl class="w-64 space-y-8 xl:w-80">
-                <div
-                  v-for="stat in stats"
-                  :key="stat.label"
-                  class="flex flex-col-reverse gap-y-4"
-                >
-                  <dt class="text-base leading-7 text-gray-600">
-                    {{ stat.label }}
-                  </dt>
-                  <dd
-                    class="text-5xl font-semibold tracking-tight text-gray-900"
-                  >
-                    {{ stat.value }}
-                  </dd>
-                </div>
-              </dl>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+              alt=""
+              class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+            />
           </div>
         </div>
-      </div>
-
-      <!-- Image section -->
-      <div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-        <img
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-          alt=""
-          class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+        <div
+          class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"
         />
       </div>
 
-      <!-- Values section -->
-      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >
-            Our values
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
-          </p>
-        </div>
-        <dl
-          class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      <!-- Timeline section -->
+      <div class="mx-auto -mt-8 max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4"
         >
-          <div v-for="value in values" :key="value.name">
-            <dt class="font-semibold text-gray-900">{{ value.name }}</dt>
-            <dd class="mt-1 text-gray-600">{{ value.description }}</dd>
+          <div v-for="item in timeline" :key="item.name">
+            <time
+              :datetime="item.dateTime"
+              class="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+            >
+              <svg
+                viewBox="0 0 4 4"
+                class="mr-4 h-1 w-1 flex-none"
+                aria-hidden="true"
+              >
+                <circle cx="2" cy="2" r="2" fill="currentColor" />
+              </svg>
+              {{ item.date }}
+              <div
+                class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                aria-hidden="true"
+              />
+            </time>
+            <p
+              class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900"
+            >
+              {{ item.name }}
+            </p>
+            <p class="mt-1 text-base leading-7 text-gray-600">
+              {{ item.description }}
+            </p>
           </div>
-        </dl>
+        </div>
       </div>
 
       <!-- Logo cloud -->
-      <div class="relative isolate -z-10 mt-32 sm:mt-48">
+      <div class="mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8">
         <div
-          class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]"
+          class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16"
         >
-          <svg
-            class="h-[40rem] w-[80rem] flex-none stroke-gray-200"
-            aria-hidden="true"
+          <h2
+            class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
-            <defs>
-              <pattern
-                id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                width="200"
-                height="200"
-                x="50%"
-                y="50%"
-                patternUnits="userSpaceOnUse"
-                patternTransform="translate(-100 0)"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y="50%" class="overflow-visible fill-gray-50">
-              <path
-                d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
-                stroke-width="0"
-              />
-            </svg>
-            <rect
-              width="100%"
-              height="100%"
-              stroke-width="0"
-              fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
-            />
-          </svg>
-        </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
-            Trusted by the world’s most innovative teams
+            Our customers love us
           </h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Aliquip reprehenderit incididunt amet quis fugiat ut velit. Sit
+            occaecat labore proident cillum in nisi adipisicing officia
+            excepteur tempor deserunt.
+          </p>
           <div
-            class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+            class="mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:max-w-4xl lg:grid-cols-5"
           >
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+              src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg"
               alt="Transistor"
               width="158"
               height="48"
             />
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+              src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg"
               alt="Reform"
               width="158"
               height="48"
             />
             <img
               class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+              src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg"
               alt="Tuple"
               width="158"
               height="48"
             />
             <img
               class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg"
               alt="SavvyCal"
               width="158"
               height="48"
             />
             <img
               class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+              src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg"
               alt="Statamic"
               width="158"
               height="48"
             />
           </div>
+          <div
+            class="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl"
+            aria-hidden="true"
+          >
+            <div
+              class="aspect-[1404/767] w-[87.75rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
+              style="
+                clip-path: polygon(
+                  73.6% 51.7%,
+                  91.7% 11.8%,
+                  100% 46.4%,
+                  97.4% 82.2%,
+                  92.5% 84.9%,
+                  75.7% 64%,
+                  55.3% 47.5%,
+                  46.5% 49.4%,
+                  45% 62.9%,
+                  50.3% 87.2%,
+                  21.3% 64.1%,
+                  0.1% 100%,
+                  5.4% 51.1%,
+                  21.4% 63.9%,
+                  58.9% 0.2%,
+                  73.6% 51.7%
+                );
+              "
+            />
+          </div>
         </div>
       </div>
 
-      <!-- Team section -->
-      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+      <!-- Content section -->
+      <div class="mt-32 overflow-hidden sm:mt-40">
+        <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+          <div
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8"
+          >
+            <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+              <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Our people
+              </h2>
+              <p class="mt-6 text-xl leading-8 text-gray-600">
+                Quasi est quaerat. Sit molestiae et. Provident ad dolorem
+                occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
+                error quod. Excepturi quidem expedita molestias quas.
+              </p>
+              <p class="mt-6 text-base leading-7 text-gray-600">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat. Quasi aperiam sit non sit neque reprehenderit.
+              </p>
+            </div>
+            <div
+              class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents"
+            >
+              <div
+                class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                  alt=""
+                  class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                />
+              </div>
+              <div
+                class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8"
+              >
+                <div
+                  class="order-first flex w-64 flex-none justify-end self-end lg:w-auto"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    alt=""
+                    class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                  />
+                </div>
+                <div
+                  class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                    alt=""
+                    class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                  />
+                </div>
+                <div
+                  class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    alt=""
+                    class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
           >
-            Our team
+            We approach the workplace as something that adds to our lives and
+            adds value to world.
           </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Sit facilis neque ab nulla vel. Cum eos in laudantium. Temporibus
-            eos totam in dolorum. Nemo vel facere repellendus ut eos dolores
-            similique.
-          </p>
-        </div>
-        <ul
-          role="list"
-          class="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
-        >
-          <li v-for="person in team" :key="person.name">
-            <img
-              class="mx-auto h-24 w-24 rounded-full"
-              :src="person.imageUrl"
-              alt=""
-            />
-            <h3
-              class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900"
-            >
-              {{ person.name }}
-            </h3>
-            <p class="text-sm leading-6 text-gray-600">{{ person.role }}</p>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Blog section -->
-      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >
-            From the blog
-          </h2>
-          <p class="mt-2 text-lg leading-8 text-gray-600">
-            Vel dolorem qui facilis soluta sint aspernatur totam cumque.
+          <p class="mt-6 text-base leading-7 text-gray-600">
+            Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
+            euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit
+            eu in id. Integer vel nibh.
           </p>
         </div>
         <div
-          class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end"
         >
-          <article
-            v-for="post in blogPosts"
-            :key="post.id"
-            class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+          <div
+            class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start"
           >
-            <img
-              :src="post.imageUrl"
-              alt=""
-              class="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
-            />
-            <div
-              class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-            />
-
-            <div
-              class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"
+            <p
+              class="flex-none text-3xl font-bold tracking-tight text-gray-900"
             >
-              <time :datetime="post.datetime" class="mr-8">{{
-                post.date
-              }}</time>
-              <div class="-ml-4 flex items-center gap-x-4">
-                <svg
-                  viewBox="0 0 2 2"
-                  class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
-                >
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
-                <div class="flex gap-x-2.5">
-                  <img
-                    :src="post.author.imageUrl"
-                    alt=""
-                    class="h-6 w-6 flex-none rounded-full bg-white/10"
-                  />
-                  {{ post.author.name }}
-                </div>
-              </div>
+              250k
+            </p>
+            <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p class="text-lg font-semibold tracking-tight text-gray-900">
+                Users on the platform
+              </p>
+              <p class="mt-2 text-base leading-7 text-gray-600">
+                Vel labore deleniti veniam consequuntur sunt nobis.
+              </p>
             </div>
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-              <a :href="post.href">
-                <span class="absolute inset-0" />
-                {{ post.title }}
-              </a>
-            </h3>
-          </article>
+          </div>
+          <div
+            class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44"
+          >
+            <p class="flex-none text-3xl font-bold tracking-tight text-white">
+              $8.9 billion
+            </p>
+            <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p class="text-lg font-semibold tracking-tight text-white">
+                We’re proud that our customers have made over $8 billion in
+                total revenue.
+              </p>
+              <p class="mt-2 text-base leading-7 text-gray-400">
+                Eu duis porta aliquam ornare. Elementum eget magna egestas.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28"
+          >
+            <p class="flex-none text-3xl font-bold tracking-tight text-white">
+              401,093
+            </p>
+            <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p class="text-lg font-semibold tracking-tight text-white">
+                Transactions this year
+              </p>
+              <p class="mt-2 text-base leading-7 text-indigo-200">
+                Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu
+                duis porta aliquam ornare.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content section -->
+      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div
+          class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+        >
+          <div class="w-full lg:max-w-lg lg:flex-auto">
+            <h2
+              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              We’re always looking for awesome people to join us
+            </h2>
+            <p class="mt-6 text-xl leading-8 text-gray-600">
+              Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
+              euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus
+              sit eu in id.
+            </p>
+            <img
+              src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
+              alt=""
+              class="mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
+            />
+          </div>
+          <div class="w-full lg:max-w-xl lg:flex-auto">
+            <h3 class="sr-only">Job openings</h3>
+            <ul class="-my-8 divide-y divide-gray-100">
+              <li v-for="opening in jobOpenings" :key="opening.id" class="py-8">
+                <dl class="relative flex flex-wrap gap-x-3">
+                  <dt class="sr-only">Role</dt>
+                  <dd
+                    class="w-full flex-none text-lg font-semibold tracking-tight text-gray-900"
+                  >
+                    <a :href="opening.href">
+                      {{ opening.role }}
+                      <span class="absolute inset-0" aria-hidden="true" />
+                    </a>
+                  </dd>
+                  <dt class="sr-only">Description</dt>
+                  <dd
+                    class="mt-2 w-full flex-none text-base leading-7 text-gray-600"
+                  >
+                    {{ opening.description }}
+                  </dd>
+                  <dt class="sr-only">Salary</dt>
+                  <dd
+                    class="mt-4 text-base font-semibold leading-7 text-gray-900"
+                  >
+                    {{ opening.salary }}
+                  </dd>
+                  <dt class="sr-only">Location</dt>
+                  <dd
+                    class="mt-4 flex items-center gap-x-3 text-base leading-7 text-gray-500"
+                  >
+                    <svg
+                      viewBox="0 0 2 2"
+                      class="h-0.5 w-0.5 flex-none fill-gray-300"
+                      aria-hidden="true"
+                    >
+                      <circle cx="1" cy="1" r="1" />
+                    </svg>
+                    {{ opening.location }}
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+            <div class="mt-8 flex border-t border-gray-100 pt-8">
+              <a
+                href="#"
+                class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                >View all openings <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer
-      class="mx-auto mt-40 max-w-7xl overflow-hidden px-6 pb-20 sm:mt-64 sm:pb-24 lg:px-8"
-    >
-      <nav
-        class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
-        aria-label="Footer"
-      >
+    <footer class="mt-32 sm:mt-40" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <div
-          v-for="item in footerNavigation.main"
-          :key="item.name"
-          class="pb-6"
+          class="border-t border-gray-900/10 pt-20 xl:grid xl:grid-cols-3 xl:gap-8"
         >
-          <a
-            :href="item.href"
-            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-            >{{ item.name }}</a
-          >
+          <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Solutions
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li
+                    v-for="item in footerNavigation.solutions"
+                    :key="item.name"
+                  >
+                    <a
+                      :href="item.href"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >{{ item.name }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Support
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li v-for="item in footerNavigation.support" :key="item.name">
+                    <a
+                      :href="item.href"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >{{ item.name }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Company
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li v-for="item in footerNavigation.company" :key="item.name">
+                    <a
+                      :href="item.href"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >{{ item.name }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                  Legal
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li v-for="item in footerNavigation.legal" :key="item.name">
+                    <a
+                      :href="item.href"
+                      class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >{{ item.name }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 xl:mt-0">
+            <h3 class="text-sm font-semibold leading-6 text-gray-900">
+              Subscribe to our newsletter
+            </h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
+            </p>
+            <form class="mt-6 sm:flex sm:max-w-md">
+              <label for="email-address" class="sr-only">Email address</label>
+              <input
+                type="email"
+                name="email-address"
+                id="email-address"
+                autocomplete="email"
+                required=""
+                class="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+                placeholder="Enter your email"
+              />
+              <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                <button
+                  type="submit"
+                  class="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </nav>
-      <div class="mt-10 flex justify-center space-x-10">
-        <a
-          v-for="item in footerNavigation.social"
-          :key="item.name"
-          :href="item.href"
-          class="text-gray-400 hover:text-gray-500"
+        <div
+          class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24"
         >
-          <span class="sr-only">{{ item.name }}</span>
-          <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-        </a>
+          <div class="flex space-x-6 md:order-2">
+            <a
+              v-for="item in footerNavigation.social"
+              :key="item.name"
+              :href="item.href"
+              class="text-gray-400 hover:text-gray-500"
+            >
+              <span class="sr-only">{{ item.name }}</span>
+              <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+            </a>
+          </div>
+          <p class="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
+            &copy; 2020 Your Company, Inc. All rights reserved.
+          </p>
+        </div>
       </div>
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">
-        &copy; 2020 Your Company, Inc. All rights reserved.
-      </p>
     </footer>
   </div>
 </template>
@@ -565,78 +619,89 @@ const navigation = [
   { name: "Resources", href: "#" },
   { name: "Company", href: "#" },
 ];
-const stats = [
-  { label: "Transactions every 24 hours", value: "44 million" },
-  { label: "Assets under holding", value: "$119 trillion" },
-  { label: "New users annually", value: "46,000" },
-];
-const values = [
+const timeline = [
   {
-    name: "Be world-class",
+    name: "Founded company",
     description:
-      "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.",
+      "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.",
+    date: "Aug 2021",
+    dateTime: "2021-08",
   },
   {
-    name: "Share everything you know",
+    name: "Secured $65m in funding",
     description:
-      "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.",
+      "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.",
+    date: "Dec 2021",
+    dateTime: "2021-12",
   },
   {
-    name: "Always learning",
+    name: "Released beta",
     description:
-      "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.",
+      "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.",
+    date: "Feb 2022",
+    dateTime: "2022-02",
   },
   {
-    name: "Be supportive",
+    name: "Global launch of product",
     description:
-      "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.",
-  },
-  {
-    name: "Take responsibility",
-    description:
-      "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
-  },
-  {
-    name: "Enjoy downtime",
-    description:
-      "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.",
+      "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.",
+    date: "Dec 2022",
+    dateTime: "2022-12",
   },
 ];
-const team = [
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-  },
-  // More people...
-];
-const blogPosts = [
+const jobOpenings = [
   {
     id: 1,
-    title: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+    role: "Full-time designer",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    author: {
-      name: "Michael Foster",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+      "Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.",
+    salary: "$75,000 USD",
+    location: "San Francisco, CA",
   },
-  // More posts...
+  {
+    id: 2,
+    role: "Laravel developer",
+    href: "#",
+    description:
+      "Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.",
+    salary: "$125,000 USD",
+    location: "San Francisco, CA",
+  },
+  {
+    id: 3,
+    role: "React Native developer",
+    href: "#",
+    description:
+      "Veniam ipsam nisi quas architecto eos non voluptatem in nemo. Est occaecati nihil omnis delectus illum est.",
+    salary: "$105,000 USD",
+    location: "San Francisco, CA",
+  },
 ];
 const footerNavigation = {
-  main: [
+  solutions: [
+    { name: "Marketing", href: "#" },
+    { name: "Analytics", href: "#" },
+    { name: "Commerce", href: "#" },
+    { name: "Insights", href: "#" },
+  ],
+  support: [
+    { name: "Pricing", href: "#" },
+    { name: "Documentation", href: "#" },
+    { name: "Guides", href: "#" },
+    { name: "API Status", href: "#" },
+  ],
+  company: [
+    { name: "About", href: "#" },
     { name: "Blog", href: "#" },
     { name: "Jobs", href: "#" },
     { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
     { name: "Partners", href: "#" },
+  ],
+  legal: [
+    { name: "Claim", href: "#" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
   ],
   social: [
     {

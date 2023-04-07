@@ -3,7 +3,6 @@
   <main>
     <slot />
   </main>
-  <SiblingNav />
 </template>
 
 <script>
