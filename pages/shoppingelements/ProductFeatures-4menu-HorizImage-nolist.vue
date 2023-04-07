@@ -1,4 +1,4 @@
-<<template>
+<template>
   <div class="bg-white">
     <section aria-labelledby="features-heading" class="mx-auto max-w-7xl py-32 sm:px-2 lg:px-8">
       <div class="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
