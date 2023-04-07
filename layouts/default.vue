@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <TailwindNavigation />
-  </div>
+  <MainNav />
+  <main>
+    <slot />
+  </main>
 </template>
 
 <script>

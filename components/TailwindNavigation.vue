@@ -6,7 +6,7 @@
       :key="groupName"
     >
       <h2>{{ groupName }}</h2>
-      <ul>
+      <div class="pathGrid">
         <button
           v-for="route in group"
           :key="route.name"
@@ -14,7 +14,7 @@
         >
           <nuxt-link :to="route.path">{{ route.name }}</nuxt-link>
         </button>
-      </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -63,8 +63,7 @@ nav {
   border-radius: 30px;
   width: 70vw;
   max-width: 1200px;
-  place-content: center;
-  align-items: flex-start;
+  place-items: center;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -79,10 +78,7 @@ h2 {
 
   margin-bottom: 1em;
 }
-ul {
-  display: grid;
-  place-content: center;
-  margin: 0 auto;
-  grid-template-columns: auto auto auto auto;
+.pathGrid {
+  @apply mx-auto;
 }
 </style>
